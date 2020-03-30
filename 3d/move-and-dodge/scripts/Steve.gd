@@ -38,3 +38,6 @@ func _physics_process(delta):
 func speedToRad(speed):
 	var percent_speed = speed / max_speed
 	return PI * rotation_rate * percent_speed
+
+func _on_enimy_body_entered(body):
+	pass # Replace with function body.
