@@ -39,5 +39,6 @@ func speedToRad(speed):
 	var percent_speed = speed / max_speed
 	return PI * rotation_rate * percent_speed
 
-func _on_enimy_body_entered(body):
-	pass # Replace with function body.
+func _on_enemy_body_entered(body):
+	if "player_name" in body and body.player_name == player_name:
+		print("hit")

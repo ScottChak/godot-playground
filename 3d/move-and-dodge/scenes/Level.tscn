@@ -114,4 +114,4 @@ shape = SubResource( 5 )
 [node name="MeshInstance" type="MeshInstance" parent="Box3"]
 mesh = SubResource( 6 )
 material/0 = null
-[connection signal="body_entered" from="Enemy1" to="Steve" method="_on_enimy_body_entered"]
+[connection signal="body_entered" from="Enemy1" to="Steve" method="_on_enemy_body_entered"]
