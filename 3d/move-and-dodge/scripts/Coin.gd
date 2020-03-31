@@ -1,6 +1,7 @@
 extends Area
 
 signal collected
+signal freed
 
 export(float) var rotation_speed = 0.5
 
@@ -17,7 +18,7 @@ func _on_coin_body_entered(body):
 		emit_signal("collected")
 		$AnimationPlayer.play("bounce")
 
-
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "bounce":
 		queue_free()
+		emit_signal("freed")
