@@ -41,4 +41,4 @@ func speedToRad(speed):
 
 func _on_enemy_body_entered(body):
 	if "player_name" in body and body.player_name == player_name:
-		print("hit")
+		print("hit enemy")

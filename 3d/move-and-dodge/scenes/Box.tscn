@@ -4,7 +4,7 @@
 
 [sub_resource type="CubeMesh" id=2]
 
-[node name="Enemy" type="Area"]
+[node name="RigidBody" type="RigidBody"]
 __meta__ = {
 "_edit_group_": true
 }
