@@ -4,4 +4,4 @@ func _ready():
 	pass
 
 func _on_buttontitleplay_pressed():
-	get_tree().change_scene("res://scenes/Level.tscn")
+	get_tree().change_scene("res://scenes/level/Level.tscn")
