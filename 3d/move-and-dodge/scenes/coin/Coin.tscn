@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/coin/CoinPhysics.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/coin/scripts/Coin.gd" type="Script" id=2]
+
+[node name="Coin" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="CoinPhysics" parent="." instance=ExtResource( 1 )]
+[connection signal="collected" from="CoinPhysics" to="." method="_on_CoinPhysics_collected"]
+[connection signal="tree_exited" from="CoinPhysics" to="." method="_on_CoinPhysics_tree_exited"]
