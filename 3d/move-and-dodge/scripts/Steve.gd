@@ -1,18 +1,15 @@
 extends KinematicBody
 
-signal enemy_hit
-
 export(int) var max_speed = 8
 export(float) var acceleration_rate = 0.2
 export(float) var deceleration_rate = 0.03
 
 export(float) var rotation_rate = 0.05
 
-var player_name = "STEEEVE"
 var velocity = Vector3(0, 0, 0)
 
 func _ready():
-	print("Hello " + player_name + " !")
+	pass
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_left"):
@@ -40,7 +37,3 @@ func _physics_process(delta):
 func speedToRad(speed):
 	var percent_speed = speed / max_speed
 	return PI * rotation_rate * percent_speed
-
-func _on_enemy_body_entered(body):
-	if "player_name" in body and body.player_name == player_name:
-		emit_signal("enemy_hit")

@@ -8,6 +8,6 @@ func _ready():
 func update_text():
 	text = String(score)
 
-func _on_coin_collected():
+func increment():
 	score += 1
 	update_text()

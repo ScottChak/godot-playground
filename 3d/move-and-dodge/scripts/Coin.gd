@@ -11,10 +11,9 @@ func _ready():
 func _physics_process(delta):
 	rotate_y(PI * delta * rotation_speed)
 
-func _on_coin_body_entered(body):
+func _on_Coin_body_entered(body):
 	var player = get_tree().get_root().get_node("Level/Steve")
-	
-	if player != null and "player_name" in body and body.player_name == player.player_name:
+	if player != null and body == player:
 		emit_signal("collected")
 		$AnimationPlayer.play("bounce")
 
